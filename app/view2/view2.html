@@ -1,0 +1,53 @@
+   <div class="container marketing">
+       <div class="input-group search-bar">
+      <input type="text" ng-model="search" onclick="select()" class="form-control" placeholder="Enter full movie name" autofocus />
+      <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+    </div>
+    <hr class="featurette-divider">
+     <div class="row featurette">
+        <div class="col-md-7">
+         <!--<div ng-repeat="(key, value) in details ">
+            <span class="span-outer">
+              <div class="inner-p">
+                <span class="label label-primary">{{key}} :</span> {{ value }}
+              </div>
+            </span>
+          </div>-->
+          <h3 class="featurette-heading">
+           <span class="label label-primary"> Title :</span> {{ details.Title }} </h3>
+           <h4><span class="label label-primary"> Year :</span> {{ details.Year }} </h4>
+           <h4><span class="label label-primary"> Rated :</span> {{ details.Rated }} </h4>
+           <h4><span class="label label-primary"> Released :</span> {{ details.Released }} </h4>
+           <h4><span class="label label-primary"> Runtime :</span> {{ details.Runtime }} </h4>
+           <h4><span class="label label-primary"> Genre :</span> {{ details.Genre }} </h4>
+           <h4><span class="label label-primary"> Director :</span> {{ details.Director }} </h4>
+           <h4><span class="label label-primary"> Writer :</span> {{ details.Writer }} </h4>
+           <h4><span class="label label-primary"> Actors :</span> {{ details.Actors }} </h4>
+           <h4><span class="label label-primary"> Plot :</span> {{ details.Plot }}</h4>
+           <h4><span class="label label-primary"> Language :</span> {{ details.Language }} </h4>
+           <h4><span class="label label-primary"> Awards :</span> {{ details.Awards }} </h4>
+          <h4><span class="label label-primary">Ratings :</span>
+          <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th>Source</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tr ng-repeat="step in details.Ratings">
+                <td>{{step.Source}}</td>
+                <td>{{step.Value}}</td>
+            </tr>
+        </table></h4>
+           <h4><span class="label label-primary"> imdbRating :</span> {{ details.imdbRating }} </h4>
+           <h4><span class="label label-primary"> imdbVotes :</span> {{ details.imdbVotes }} </h4>
+           <h4><span class="label label-primary"> Type :</span> {{ details.Type }} </h4>
+        </div>
+        <div class="col-md-5">
+          <div ng-if="details.Response==='True'">
+          <img class="featurette-image img-responsive center-block"  <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}"  alt="Generic placeholder image">
+        </div>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    </div>

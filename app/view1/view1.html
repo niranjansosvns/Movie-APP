@@ -1,0 +1,35 @@
+ <div class="container marketing">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h3 class="featurette-heading">
+           <span class="label label-primary"> Title :</span> {{ details.Title }} </h3>
+           <h4><span class="label label-primary"> Year :</span> {{ details.Year }} </h4>
+           <h4><span class="label label-primary"> Awards :</span> {{ details.Awards }} </h4>
+           <p class="lead"><span class="label label-primary"> Plot :</span>{{ details.Plot }}</p>
+        </div>
+        <div class="col-md-5">
+          <div ng-if="details.Response==='True'">
+          <img class="featurette-image img-responsive center-block"  <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}"  alt="Generic placeholder image">
+        </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h3 class="featurette-heading">
+           <span class="label label-primary"> Title :</span> {{ details.Title }} </h3>
+           <h4><span class="label label-primary"> Year :</span> {{ details.Year }} </h4>
+           <h4><span class="label label-primary"> Awards :</span> {{ details.Awards }} </h4>
+           <p class="lead"><span class="label label-primary"> Plot :</span>{{ details.Plot }}</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <div ng-if="details.Response==='True'">
+          <img class="featurette-image img-responsive center-block"  <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}"  alt="Generic placeholder image">
+        </div>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    </div>
